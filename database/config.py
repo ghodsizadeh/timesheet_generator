@@ -1,6 +1,7 @@
 from sqlalchemy import Column, Float, Integer, String, create_engine
 from sqlalchemy.ext.declarative import declarative_base, declared_attr
 from sqlalchemy.orm import sessionmaker
+from sqlalchemy import *
 from pathlib import Path
 import os
 

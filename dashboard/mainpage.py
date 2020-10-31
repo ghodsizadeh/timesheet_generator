@@ -1,16 +1,14 @@
-import dash
-import dash_core_components as dcc
-import dash_html_components as html
-import dash_bootstrap_components as dbc
+from .base import app, html, dcc
 from .navbar import navbar
-app = dash.Dash(__name__,external_stylesheets=[dbc.themes.SOLAR])
-
+from .pages import home
+from .callbacks import render_page_content
 
 
 app.layout = html.Div(children=[
     navbar,
-    html.H1(children='Hello Dash'),
+    dcc.Location(id="url"),
 
     html.Div(id='root'),
 
 ])
+

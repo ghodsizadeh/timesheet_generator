@@ -4,8 +4,8 @@ import dash_bootstrap_components as dbc
 navbar = dbc.NavbarSimple(
     children=[
         dbc.NavItem(dbc.NavLink("Home", href="/")),
-        dbc.NavItem(dbc.NavLink("Generator", href="#")),
-        dbc.NavItem(dbc.NavLink("Export", href="/export")),
+        dbc.NavItem(dbc.NavLink("User", href="/user")),
+        dbc.NavItem(dbc.NavLink("Report", href="/report")),
 
 
         # dbc.DropdownMenu(

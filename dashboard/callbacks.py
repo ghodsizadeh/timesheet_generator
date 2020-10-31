@@ -1,7 +1,7 @@
 from .base import app, html
 from dash.dependencies import Input, Output
 import dash_bootstrap_components as dbc
-from .pages import home, user
+from .pages import home, user, report
 
 @app.callback(Output("root", "children"), [Input("url", "pathname")])
 def render_page_content(pathname):
@@ -9,6 +9,8 @@ def render_page_content(pathname):
         return home.layout
     elif pathname == "/user":
         return user.layout
+    elif pathname == "/report":
+        return report.layout
 
     # If the user tries to reach a different page, return a 404 message
     return dbc.Jumbotron(

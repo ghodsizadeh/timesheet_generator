@@ -1,16 +1,16 @@
 import dash
 import dash_core_components as dcc
 import dash_html_components as html
-
-app = dash.Dash(__name__)
+import dash_bootstrap_components as dbc
+from .navbar import navbar
+app = dash.Dash(__name__,external_stylesheets=[dbc.themes.SOLAR])
 
 
 
 app.layout = html.Div(children=[
+    navbar,
     html.H1(children='Hello Dash'),
 
-    html.Div(children='''
-        Dash: A web application framework for Python.
-    '''),
+    html.Div(id='root'),
 
 ])

@@ -42,7 +42,7 @@ def create_user(n_click, first_name, last_name, user_id):
         session.add(user)
         session.commit()
         return f"name: {user.first_name} , id = {user.user_id}, id_ = {user.id} "
-    return PreventUpdate
+    raise PreventUpdate
 
 
 @app.callback(
@@ -59,5 +59,5 @@ def find_user(n_click, user_id):
             return f"name: {user.first_name} , id = {user.user_id}, id_ = {user.id} "
         else:
             return "NO user."
-    return PreventUpdate
+    raise PreventUpdate
     

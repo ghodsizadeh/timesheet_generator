@@ -7,7 +7,7 @@ class User(models.Model):
     firstname = models.CharField(max_length=200)
     lastname = models.CharField(max_length=200)
     user_id = models.IntegerField()
-
+    
     @property
     def fullname(self):
         return f'{self.firstname} {self.lastname}'

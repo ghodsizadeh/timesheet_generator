@@ -68,9 +68,18 @@ TEMPLATES = [
         },
     },
 ]
+PROJECT_PATH = os.path.realpath(os.path.dirname(__file__))
+
+TEMPLATE_DIRS = [
+    os.path.join(PROJECT_PATH, 'templates/'),
+]
 
 WSGI_APPLICATION = 'timesheet.wsgi.application'
+STATIC_URL = '/static/' # the path in url
 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases

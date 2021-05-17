@@ -2,19 +2,18 @@
 
 
 # Technologies
-- pandas
-- dash
+- django
 - sqlite
-- sqlalchemy
 
 
 # Steps to run
 ```
 git clone https://github.com/ghodsizadeh/timesheet_generator.git
-cd timesheet_generator
-python -m venv venv
+cd timesheet
+python3 -m venv venv # for the first-time
 source venv/bin/activate
-pip install -r requirements.txt
+pip insall --upgrade pip
+pip install -r requirements.django.txt
 
-python main.py
+python manage.py runserver
 ```

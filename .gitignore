@@ -132,3 +132,4 @@ dmypy.json
 # vscode
 .vscode
 timesheet/sqlite3.db
+.DS_Store

@@ -54,8 +54,7 @@ def create_user(n_click, first_name, last_name, user_id):
 )
 def find_user(n_click, user_id):
     if n_click > 0:
-        user =  User.query.filter_by(user_id=9836).first()
-        if user :
+        if user := User.query.filter_by(user_id=9836).first():
             return f"name: {user.first_name} , id = {user.user_id}, id_ = {user.id} "
         else:
             return "NO user."

@@ -7,11 +7,11 @@ import os
 
 
 home = str(Path.home())
-db_path = os.path.join(home + "/.tshg/" + "timesheets.db")
+db_path = os.path.join(f'{home}/.tshg/timesheets.db')
 
 
 
-engine_path = "sqlite:///" + db_path
+engine_path = f"sqlite:///{db_path}"
 engine = create_engine(engine_path)
 
 
